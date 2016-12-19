@@ -23,11 +23,6 @@ deploy:
       cWRWdDJrUnduWXVJWlFWZEZMb1d5VEhIV1Fkc2JWQUlTalFjTlJMYUZvVmdSelI2Mjc2dzNRbVU9
 env:
 - TOXENV=py35
-- TOXENV=py34
-- TOXENV=py33
-- TOXENV=py27
-- TOXENV=py26
-- TOXENV=pypy
 install: pip install -U tox
 language: python
 python: 3.5
