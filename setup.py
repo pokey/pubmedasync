@@ -11,11 +11,15 @@ with open('HISTORY.rst') as history_file:
 
 requirements = [
     'Click>=6.0',
-    # TODO: put package requirements here
+    'aiodns>=1.1.1',
+    'aiohttp>=1.2.0',
+    'beautifulsoup4>=4.5.1',
+    'cchardet>=1.1.1',
+    'lxml>=3.7.0',
+    'tqdm>=4.10.0',
 ]
 
 test_requirements = [
-    # TODO: put package test requirements here
 ]
 
 setup(
