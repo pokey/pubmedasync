@@ -3,7 +3,7 @@
 from pubmedasync.pubmedasync import (
     test,
 )
-import pubmedasync.fetch
+import pubmedasync.fetch # noqa
 
 __author__ = """Pokey Rule"""
 __email__ = 'pokey.rule@gmail.com'
