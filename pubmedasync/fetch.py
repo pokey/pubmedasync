@@ -5,6 +5,7 @@ from urllib.parse import urlencode
 from aiohttp.errors import ClientResponseError, ServerDisconnectedError
 from bs4 import BeautifulSoup
 
+
 # This is the maximum page size allowed.  Don't change this
 page_size = 100
 max_concurrent = 20
@@ -61,7 +62,7 @@ class Fetcher(object):
                     if resp.status == 200:
                         return await resp.text()
             except (ClientResponseError, ServerDisconnectedError,
-                    RuntimeError):
+                    RuntimeError, asyncio.TimeoutError):
                 pass
             await asyncio.sleep(sleeptime)
             sleeptime = min(sleeptime * 2, 30)
