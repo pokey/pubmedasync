@@ -1,8 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from pubmedasync.pubmedasync import (
-    test,
-)
 import pubmedasync.fetch # noqa
 
 __author__ = """Pokey Rule"""
