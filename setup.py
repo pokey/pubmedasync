@@ -24,7 +24,7 @@ test_requirements = [
 
 setup(
     name='pubmedasync',
-    version='0.2.0',
+    version='0.3.0',
     description="Asyncronous wrapper around PubMed api",
     long_description=readme + '\n\n' + history,
     author="Pokey Rule",
