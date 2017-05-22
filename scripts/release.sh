@@ -2,7 +2,10 @@
 set -euo pipefail
 IFS=$'\n\t'
 
-NEW_VERSION=$(bumpversion --dry-run --list minor | \
+SECTION=minor
+[[ $# -eq 1 && $1 == "--patch" ]] && SECTION=patch
+
+NEW_VERSION=$(bumpversion --dry-run --list $SECTION | \
                  grep new_version | sed -r s,"^.*=",,)
 git flow release start v$NEW_VERSION
 bumpversion minor
