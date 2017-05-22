@@ -2,7 +2,7 @@ import asyncio
 import random
 from urllib.parse import urlencode
 
-from aiohttp.errors import ClientResponseError, ServerDisconnectedError
+from aiohttp import ClientResponseError, ServerDisconnectedError
 from bs4 import BeautifulSoup
 
 
