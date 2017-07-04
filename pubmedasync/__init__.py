@@ -4,7 +4,7 @@ import pubmedasync.fetch # noqa
 
 __author__ = """Pokey Rule"""
 __email__ = 'pokey.rule@gmail.com'
-__version__ = '0.4.1'
+__version__ = '0.4.2'
 
 __all__ = [
     'test',
