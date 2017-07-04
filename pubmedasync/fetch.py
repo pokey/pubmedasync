@@ -2,7 +2,7 @@ import asyncio
 import random
 from urllib.parse import urlencode
 
-from aiohttp import ClientResponseError, ServerDisconnectedError
+from aiohttp import ClientError, ServerDisconnectedError
 from bs4 import BeautifulSoup
 
 
@@ -61,7 +61,7 @@ class Fetcher(object):
                 async with self.session.get(url) as resp:
                     if resp.status == 200:
                         return await resp.text()
-            except (ClientResponseError, ServerDisconnectedError,
+            except (ClientError, ServerDisconnectedError,
                     RuntimeError, asyncio.TimeoutError):
                 pass
             await asyncio.sleep(sleeptime)
